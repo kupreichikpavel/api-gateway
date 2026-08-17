@@ -22,7 +22,7 @@ spring:
             - id: user-service
               uri: ${USER_SERVICE_URL:http://localhost:8084}
               predicates:
-                - Path=/api/v1/users/**
+                - Path=/api/v1/users/**,/api/v1/payment-cards/**
 
             - id: order-service
               uri: ${ORDER_SERVICE_URL:http://localhost:8083}
