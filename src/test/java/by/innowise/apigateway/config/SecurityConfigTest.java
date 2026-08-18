@@ -46,8 +46,8 @@ class SecurityConfigTest {
   }
 
   @Test
-  void registerShouldBePublic() {
-    assertPublicPost("/api/v1/auth/register");
+  void signUpShouldBePublic() {
+    assertPublicPost("/api/v1/auth/sign-up");
   }
 
   @Test
@@ -107,7 +107,7 @@ class SecurityConfigTest {
               request -> ServerResponse.ok().build()
           )
           .POST(
-              "/api/v1/auth/register",
+              "/api/v1/auth/sign-up",
               request -> ServerResponse.ok().build()
           )
           .POST(
