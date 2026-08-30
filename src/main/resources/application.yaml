@@ -29,6 +29,11 @@ spring:
               predicates:
                 - Path=/api/v1/orders/**,/api/v1/items/**
 
+            - id: payment-service
+              uri: ${PAYMENT_SERVICE_URL:http://localhost:8085}
+              predicates:
+                - Path=/api/v1/payments/**
+
 server:
   port: ${SERVER_PORT:8080}
 
