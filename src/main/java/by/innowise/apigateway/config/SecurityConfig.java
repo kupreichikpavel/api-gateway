@@ -27,7 +27,7 @@ public class SecurityConfig {
                 "/api/v1/auth/sign-up",
                 "/api/v1/auth/refresh"
             ).permitAll()
-            .pathMatchers("/actuator/health").permitAll()
+            .pathMatchers("/actuator/health/**").permitAll()
             .anyExchange().authenticated()
         )
         .oauth2ResourceServer(oauth2 ->
